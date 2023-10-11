@@ -1,0 +1,609 @@
+
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Eteneva Properties Limited</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta content="Real Estate Website Landing Page" name="description" />
+        <meta content="Real Estate, buy, sell, Rent, tailwind Css" name="keywords" />
+        <meta name="author" content="Shreethemes" />
+        <meta name="website" content="https://shreethemes.in" />
+        <meta name="email" content="support@shreethemes.in" />
+        <meta name="version" content="1.3.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="../site/assets/images/favicon.ico" />
+
+        <!-- Css -->
+        <link href="../assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
+        <link href="../assets/libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet">
+        <!-- Main Css -->
+        <link href="../assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="../assets/css/icons.css" />
+        <link rel="stylesheet" href="../assets/css/tailwind.css" />
+        <script type="text/javascript" src="ajax.js"> </script>
+
+    </head>
+    
+    <body class="dark:bg-slate-900" onload="setDetaisl()">
+        <!-- Start Navbar -->
+        <nav id="topnav" class="defaultscroll is-sticky">
+            <div class="container">
+                <!-- Start Logo container-->
+                <a class="logo" href="index.html">
+                    <span class="inline-block dark:hidden">
+                        <img src="assets/images/logo-dark.png" class="l-dark" height="24" alt="">
+                        <img src="assets/images/logo-light.png" class="l-light" height="24" alt="">
+                    </span>
+                    <img src="assets/images/logo-light.png" height="24" class="hidden dark:inline-block" alt="">
+                </a>
+                <!-- End Logo container-->
+
+                <!-- Start Mobile Toggle -->
+                <div class="menu-extras">
+                    <div class="menu-item">
+                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- End Mobile Toggle -->
+
+                <!--Login button Start-->
+                <ul class="buy-button list-none mb-0">
+                  
+                    <li class="sm:inline ltr:pl-1 rtl:pr-1 mb-0 hidden">
+                        <a href="auth-signup.html" class="btn bg-green-600 hover:bg-green-700 border-green-600 dark:border-green-600 text-white rounded-full">Logout</a>
+                    </li>
+                </ul>
+                <!--Login button End-->
+
+                <div id="navigation">
+                    <!-- Navigation Menu-->   
+                    <ul class="navigation-menu justify-end nav-light">
+                        <li class="has-submenu parent-menu-item">
+                            <a href="javascript:void(0)">Home</a>
+                        </li>
+                
+                        <!-- <li><a href="buy.html" class="sub-menu-item">Buy</a></li>
+                
+                        <li><a href="sell.html" class="sub-menu-item">Sell</a></li> -->
+
+                        <li class="has-submenu parent-parent-menu-item">
+                            <a href="list.html">Listing</a>
+                           
+                        </li>
+
+                       </ul><!--end navigation menu-->
+                </div><!--end navigation-->
+            </div><!--end container-->
+        </nav><!--end header-->
+        <!-- End Navbar -->
+
+        <!-- Start Hero -->
+        <section class="relative table w-full py-32 lg:py-36 bg-[url('../../assets/images/bg/01.jpg')] bg-no-repeat bg-center bg-cover">
+            <div class="absolute inset-0 bg-black opacity-80"></div>
+            <div class="container">
+                <div class="grid grid-cols-1 text-center mt-10">
+                    <h3 class="md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">Add New Property Listing</h3>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <div class="relative">
+            <div class="shape overflow-hidden z-1 text-white dark:text-slate-900">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+      
+        
+        <!-- Start -->
+        <!-- name="myForm"  id="myForm" onsubmit="return validateForm()" -->
+         <!-- <form method="post"  style="border: 1px solid #e5e7eb;padding: 2rem;" enctype="multipart/form-data" class="formstyle"> -->
+         <div  style="border: 1px solid #e5e7eb;padding: 2rem;">
+            <p class="mb-0" id="error-msg"></p>
+            <div id="simple-msg"></div>
+            <div class="grid lg:grid-cols-12 lg:gap-6">
+               
+                <div class="lg:col-span-6 mb-5">
+                    <label for="name" class="font-medium">Property Name:</label>
+                    <input name="name" id="propName" type="text" class="form-input mt-2" placeholder="Property Name :">
+                </div>
+   
+                <!-- <div class="lg:col-span-6 mb-5">
+                    <label for="email" class="font-medium">Property Type:</label>
+                    <input name="email" id="propType" type="text" class="form-input mt-2" placeholder="Property Type :">
+                </div> -->
+
+                <div>
+                    <label for="buy-properties" >Property Type:</label>
+                    <div >
+                        <!-- <i class="uil uil-estate icons"></i> -->
+                        <select class="form-select z-2" data-trigger name="choices-catagory" id="propType" type="text" aria-label="Default select example">
+                            <option>Houses (compound)</option>
+                            <option>Apartment</option>
+                            <option>Office Space</option>
+                            <option>Land</option>
+                            <option>Massionete</option>
+                            <option>Bungalow</option>
+                            <option>Townhome</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="buy-properties" >Listing Type:</label>
+                    <div >
+                        <!-- <i class="uil uil-estate icons"></i> -->
+                        <select class="form-select z-2" data-trigger name="choices-catagory" id="listingType" type="text" aria-label="Default select example">
+                            <option>Sale</option>
+                            <option>Rent</option>
+                            <option>Diaspora</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="grid lg:grid-cols-12 lg:gap-6">
+               
+               <div class="lg:col-span-6 mb-5">
+                   <label for="name" class="font-medium">Contact:</label>
+                   <input name="name" id="propContact" type="text" class="form-input mt-2" placeholder="123-456-789">
+               </div>
+  
+               <div class="lg:col-span-6 mb-5">
+                   <label for="email" class="font-medium">Price:</label>
+                   <input name="email" id="propPrice" type="number" class="form-input mt-2" placeholder="Ksh 12,000">
+               </div>
+
+               <div class="lg:col-span-6 mb-5">
+                  <label for="email" class="font-medium">Status:</label>
+                  <select class="form-select z-2" data-trigger name="choices-catagory" id="propStatus" type="text" aria-label="Default select example">
+                    <option>Available</option>
+                    <option>Sold</option>
+                </select>
+                  <!-- <input name="email" id="propStatus" type="text" class="form-input mt-2" placeholder="Available/Sold"> -->
+
+               </div>
+
+               <div class="lg:col-span-6 mb-5">
+                  <label for="email" class="font-medium">Size:</label>
+                  <input name="email" id="propSize" type="number" class="form-input mt-2" placeholder="12,000 sqf">
+
+               </div>
+
+               <div class="lg:col-span-6 mb-5">
+                  <label for="email" class="font-medium">Monthly Pay:</label>
+                  <input name="email" id="propMonthlyPay" type="number" class="form-input mt-2" placeholder="12,000 $">
+
+               </div>
+
+               <div class="lg:col-span-6 mb-5">
+                <label for="email" class="font-medium">No of Units:</label>
+                <input name="email" id="propUnits" type="number" class="form-input mt-2" placeholder="12,000 $">
+
+             </div>
+
+             <div class="lg:col-span-6 mb-5">
+                <label for="email" class="font-medium">Available Units:</label>
+                <input name="email" id="propAvailableUnits" type="number" class="form-input mt-2" placeholder="12,000 $">
+
+             </div>
+
+               <div class="lg:col-span-6 mb-5">
+                  <label for="email" class="font-medium">Lease Type:</label>
+                  <select class="form-select z-2" data-trigger name="choices-catagory" id="propLeaseType" type="text" aria-label="Default select example">
+                    <option>Fixed</option>
+                    <option>Varied</option>
+                </select>
+                  <!-- <input name="email" id="propLeaseType" type="text" class="form-input mt-2" placeholder="Fixed"> -->
+
+               </div>
+
+               <div class="lg:col-span-6 mb-5">
+                  <label for="email" class="font-medium">No. of Bed:</label>
+                  <input name="email" id="propBeds" type="number" class="form-input mt-2" placeholder="2">
+
+               </div>
+
+               <div class="lg:col-span-6 mb-5">
+                  <label for="email" class="font-medium">No. of Baths:</label>
+                  <input name="email" id="propBaths" type="number" class="form-input mt-2" placeholder="2">
+
+               </div>
+
+               <div class="lg:col-span-6 mb-5">
+                <label for="email" class="font-medium">Size in Square Foot:</label>
+                <input name="email" id="propSqrfoot" type="number" class="form-input mt-2" placeholder="2">
+
+             </div>
+
+             <div class="lg:col-span-6 mb-5">
+                <label for="email" class="font-medium">Image</label>
+                <input name="email" id="base64" type="file" class="form-input mt-2" onchange="readFile()">
+
+             </div>
+               
+
+           </div>
+   
+            <div class="grid grid-cols-1">
+                <!-- <div class="mb-5">
+                    <label for="subject" class="font-medium">Your Question:</label>
+                    <input name="subject" id="subject" class="form-input mt-2" placeholder="Subject :">
+                </div> -->
+   
+                <div class="mb-5">
+                    <label for="comments" class="font-medium">Property Description:</label>
+                    <textarea name="comments" id="propDescription" class="form-input mt-2 textarea" placeholder="Description :"></textarea>
+                </div>
+            </div>
+            <button type="submit" id="submit" name="send" class="btn bg-green-600 hover:bg-green-700 text-white rounded-md" onclick="SaveProp()">Create Property</button>
+        <!-- </form> -->
+        </div>
+        <!-- End -->
+
+        <!-- Start Footer -->
+        <footer class="relative bg-slate-900 dark:bg-slate-800 mt-24">
+            <div class="container">
+                <div class="grid grid-cols-1">
+                    <div class="relative py-16">
+                        <!-- Subscribe -->
+                        <div class="relative w-full">
+                            <div class="relative -top-40 bg-white dark:bg-slate-900 lg:px-8 px-6 py-10 rounded-xl shadow-lg dark:shadow-gray-700 overflow-hidden">
+                                <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-[30px]">
+                                    <div class="ltr:md:text-left rtl:md:text-right text-center z-1">
+                                        <h3 class="md:text-3xl text-2xl md:leading-normal leading-normal font-medium text-black dark:text-white">Subscribe to Newsletter!</h3>
+                                        <p class="text-slate-400 max-w-xl mx-auto">Subscribe to get latest updates and information.</p>
+                                    </div>
+
+                                    <div class="subcribe-form z-1">
+                                        <form class="relative max-w-lg ltr:md:ml-auto rtl:md:mr-auto">
+                                            <input type="email" id="subcribe" name="email" class="rounded-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-700" placeholder="Enter your email :">
+                                            <button type="submit" class="btn bg-green-600 hover:bg-green-700 text-white rounded-full">Subscribe</button>
+                                        </form><!--end form-->
+                                    </div>
+                                </div>
+
+                                <div class="absolute -top-5 ltr:-left-5 rtl:-right-5">
+                                    <div class="uil uil-envelope lg:text-[150px] text-7xl text-black/5 dark:text-white/5 ltr:-rotate-45 rtl:rotate-45"></div>
+                                </div>
+
+                                <div class="absolute -bottom-5 ltr:-right-5 rtl:-left-5">
+                                    <div class="uil uil-pen lg:text-[150px] text-7xl text-black/5 dark:text-white/5 rtl:-rotate-90"></div>
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-12 grid-cols-1 gap-[30px] -mt-24">
+                                <div class="lg:col-span-4 md:col-span-12">
+                                    <a href="#" class="text-[22px] focus:outline-none">
+                                        <img src="site/assets/images/logo-light.png" alt="">
+                                    </a>
+                                    <p class="mt-6 text-gray-300">A great plateform to buy, sell and rent your properties without any agent or commisions.</p>
+                            
+                                </div><!--end col-->
+                        
+                                <div class="lg:col-span-2 md:col-span-4">
+                                    <h5 class="tracking-[1px] text-gray-100 font-semibold">Company</h5>
+                                    <ul class="list-none footer-list mt-6">
+                                        <li><a href="aboutus.html" class="text-slate-300 hover:text-slate-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b ltr:mr-1 rtl:ml-1"></i> About us</a></li>
+                                        <li class="mt-[10px]"><a href="features.html" class="text-slate-300 hover:text-slate-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b ltr:mr-1 rtl:ml-1"></i> Services</a></li>
+                                        <li class="mt-[10px]"><a href="pricing.html" class="text-slate-300 hover:text-slate-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b ltr:mr-1 rtl:ml-1"></i> Pricing</a></li>
+                                        <li class="mt-[10px]"><a href="blog.html" class="text-slate-300 hover:text-slate-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b ltr:mr-1 rtl:ml-1"></i> Blog</a></li>
+                                        <li class="mt-[10px]"><a href="auth-login.html" class="text-slate-300 hover:text-slate-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b ltr:mr-1 rtl:ml-1"></i> Login</a></li>
+                                    </ul>
+                                </div><!--end col-->
+                        
+                                <div class="lg:col-span-3 md:col-span-4">
+                                    <h5 class="tracking-[1px] text-gray-100 font-semibold">Usefull Links</h5>
+                                    <ul class="list-none footer-list mt-6">
+                                        <li><a href="terms.html" class="text-slate-300 hover:text-slate-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b ltr:mr-1 rtl:ml-1"></i> Terms of Services</a></li>
+                                        <li class="mt-[10px]"><a href="privacy.html" class="text-slate-300 hover:text-slate-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b ltr:mr-1 rtl:ml-1"></i> Privacy Policy</a></li>
+                                        <li class="mt-[10px]"><a href="listing-one.html" class="text-slate-300 hover:text-slate-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b ltr:mr-1 rtl:ml-1"></i> Listing</a></li>
+                                        <li class="mt-[10px]"><a href="contact.html" class="text-slate-300 hover:text-slate-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b ltr:mr-1 rtl:ml-1"></i> Contact</a></li>
+                                    </ul>
+                                </div><!--end col-->
+    
+                                <div class="lg:col-span-3 md:col-span-4">
+                                    <h5 class="tracking-[1px] text-gray-100 font-semibold">Contact Details</h5>
+                            
+                            
+                                    <div class="flex mt-6">
+                                        <i data-feather="map-pin" class="w-5 h-5 text-green-600 ltr:mr-3 rtl:ml-3"></i>
+                                        <div class="">
+                                            <h6 class="text-gray-300 mb-2">C/54 Northwest Freeway, <br> Suite 558, <br> Houston, USA 485</h6>
+                                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin" data-type="iframe" class="text-green-600 hover:text-green-700 duration-500 ease-in-out lightbox">View on Google map</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex mt-6">
+                                        <i data-feather="mail" class="w-5 h-5 text-green-600 ltr:mr-3 rtl:ml-3"></i>
+                                        <div class="">
+                                            <a href="mailto:contact@example.com" class="text-slate-300 hover:text-slate-400 duration-500 ease-in-out">contact@example.com</a>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="flex mt-6">
+                                        <i data-feather="phone" class="w-5 h-5 text-green-600 ltr:mr-3 rtl:ml-3"></i>
+                                        <div class="">
+                                            <a href="tel:+152534-468-854" class="text-slate-300 hover:text-slate-400 duration-500 ease-in-out">+152 534-468-854</a>
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end grid-->
+                        </div>
+                        <!-- Subscribe -->
+                    </div>
+                </div>
+            </div><!--end container-->
+
+            <div class="py-[30px] px-0 border-t border-gray-800 dark:border-gray-700">
+                <div class="container text-center">
+                    <div class="grid md:grid-cols-2 items-center gap-6">
+                        <div class="ltr:md:text-left rtl:md:text-right text-center">
+                            <p class="mb-0 text-gray-300">© <script>document.write(new Date().getFullYear())</script> Hously. Design with <i class="mdi mdi-heart text-red-600"></i> by <a href="https://shreethemes.in/" target="_blank" class="text-reset">Shreethemes</a>.</p>
+                        </div>
+
+                        <ul class="list-none ltr:md:text-right rtl:md:text-left text-center">
+                            <li class="inline"><a href="https://1.envato.market/hously" target="_blank" class="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"><i data-feather="shopping-cart" class="h-4 w-4"></i></a></li>
+                            <li class="inline"><a href="https://dribbble.com/shreethemes" target="_blank" class="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"><i data-feather="dribbble" class="h-4 w-4"></i></a></li>
+                            <li class="inline"><a href="https://www.behance.net/shreethemes" target="_blank" class="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"><i class="uil uil-behance align-baseline"></i></a></li>
+                            <li class="inline"><a href="http://linkedin.com/company/shreethemes" target="_blank" class="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"><i data-feather="linkedin" class="h-4 w-4"></i></a></li>
+                            <li class="inline"><a href="https://www.facebook.com/shreethemes" target="_blank" class="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"><i data-feather="facebook" class="h-4 w-4"></i></a></li>
+                            <li class="inline"><a href="https://www.instagram.com/shreethemes/" target="_blank" class="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"><i data-feather="instagram" class="h-4 w-4"></i></a></li>
+                            <li class="inline"><a href="https://twitter.com/shreethemes" target="_blank" class="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"><i data-feather="twitter" class="h-4 w-4"></i></a></li>
+                            <li class="inline"><a href="mailto:support@shreethemes.in" class="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"><i data-feather="mail" class="h-4 w-4"></i></a></li>
+                            <li class="inline"><a href="https://forms.gle/QkTueCikDGqJnbky9" target="_blank" class="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"><i data-feather="file-text" class="h-4 w-4"></i></a></li>
+                        </ul><!--end icon-->
+                    </div><!--end grid-->
+                </div><!--end container-->
+            </div>
+        </footer><!--end footer-->
+        <!-- End Footer -->
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 ltr:right-5 rtl:left-5 h-9 w-9 text-center bg-green-600 text-white justify-center items-center"><i class="uil uil-arrow-up"></i></a>
+        <!-- Back to top -->
+
+        <!-- JAVASCRIPTS -->
+        <!-- <script src="../site/"></script> -->
+        <script src="site/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+        <script src="site/assets/libs/tobii/js/tobii.min.js"></script>
+        <script src="site/assets/libs/feather-icons/feather.min.js"></script>
+        <script src="site/assets/js/plugins.init.js"></script>
+        <script src="site/assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+      <style>
+         body {
+            margin: 0;
+            background-color: white;
+            font-family: "League Spartan", sans-serif;
+            font-size: 15px;
+            line-height: 24px;
+            --tw-text-opacity: 1;
+            color: rgb(22 28 45 / var(--tw-text-opacity));
+            
+         }
+        
+         ul.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+         }
+
+         ul.topnav li {float: left;}
+
+         ul.topnav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+         }
+
+         ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+         ul.topnav li a.active {background-color: #04AA6D;}
+
+         ul.topnav li.right {float: right;}
+
+         @media screen and (max-width: 600px) {
+            ul.topnav li.right, 
+            ul.topnav li {float: none;}
+         }
+
+         .center{
+            text-align: center;
+            padding-left: 6rem !important;
+            padding-right: 6rem !important;
+            padding-top: 2rem !important;
+            padding-bottom: 2rem !important;
+
+         }
+
+         .formstyle{
+            /* display: inline-block; */
+            padding-left: 1rem;
+            border: 1px solid #e5e7eb;
+            background-color: e5e7eb;
+            padding: 1.5rem !important;
+            border-top-left-radius: 0.75rem !important;
+            border-top-right-radius: 0.75rem !important;
+            border-bottom-left-radius: 0.75rem !important;
+            border-bottom-right-radius: 0.75rem !important;
+
+         }
+
+         .holders{
+            text-align: left !important;
+            display: inline-block;
+            padding: 1rem;
+            width: 100%;
+         }
+
+         .holdentContent{
+            margin: 1rem;
+            display: inline-block;
+         }
+
+         label{
+            padding-bottom: 2rem;
+            font-weight: 600 !important;
+         }
+         
+
+         input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+         }
+
+         input[type=number], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+         }
+
+
+      </style>
+        <script type="text/javascript" src="../ajax.js"> </script>
+    </head>
+    <ul class="topnav">
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">Property Listing</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="right"><a href="#about">Logout</a></li>
+    </ul>
+    <body onload="getProperties()">
+      <div class="center">
+
+
+
+         
+         <form method="POST" id="foorm" enctype="multipart/form-data" class="formstyle"> 
+
+            <div class="holders">
+               <div class="holdentContent" style="width:42%">
+                  <label>propName</label>
+                  <input type="text" name="propName" id="propName"> 
+               </div>
+
+
+               <div class="holdentContent" style="width:42%">
+                  <label>propType</label> 
+                  <input type="text" name="propType" id="propType">
+               </div>
+            </div>
+
+
+            <div class="holders">
+              
+               <div class="holdentContent" style="width:27%">
+                  <label>propContact</label> 
+                  <input type="number" name="propContact" id="propContact">
+               </div>
+
+               <div class="holdentContent" style="width:27%">
+                  <label>propPrice</label> 
+                  <input type="number" name="propPrice" id="propPrice">
+               </div>
+
+
+               <div class="holdentContent" style="width:27%">
+                  <label>propSize</label> 
+                  <input type="number" name="propStatus" id="propSize">
+               </div>
+               
+            </div>
+
+            <div class="holders">
+              
+               <div class="holdentContent" style="width:27%">
+                  <label>propLeaseType</label> 
+                  <input type="text" name="propLeaseType" id="propLeaseType">
+               </div>
+
+               <div class="holdentContent" style="width:27%">
+                  <label>propMonthlyPay</label> 
+                  <input type="number" name="propMonthlyPay" id="propMonthlyPay">
+               </div>
+
+
+               <div class="holdentContent" style="width:27%">
+                  <label>propStatus</label> 
+                  <input type="text" name="propStatus" id="propStatus">
+               </div>
+               
+            </div>
+
+            <div class="holders">
+              
+               <div class="holdentContent" style="width:27%">
+                  <label>propBeds</label> 
+                  <input type="number" name="propBeds" id="propBeds">
+               </div>
+
+               <div class="holdentContent" style="width:27%">
+                  <label>propBaths</label> 
+                  <input type="number" name="propBaths" id="propBaths">
+               </div>
+
+
+               <div class="holdentContent" style="width:27%">
+                  <label>propSqrfoot</label> 
+                  <input type="number" name="propSqrfoot" id="propSqrfoot">
+               </div>
+               
+            </div>
+
+
+
+
+         
+           
+            
+            <div class="holders">
+               <div class="holdentContent" style="width:86%;" >
+                  <label>propDescription</label>
+                  <textarea name="propDescription" id="propDescription" style="height:200px;"></textarea>
+               </div>
+            </div>
+           
+            
+            
+           
+           
+         
+             <input type="submit" value="Submit!" />
+        </form>
+      </div>
+        
+        
+
+
+    <button onclick="SaveProp()">Save Property</button>
+    <button onclick="getProperties()">Get List of Property</button>>
+    </body>
+</html>-->
+

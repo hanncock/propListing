@@ -1,0 +1,28 @@
+create database hously;
+use hously;
+create table users(
+    id int (5) primary key auto_increment,
+    username varchar(15) not null,
+    password varchar(15) not null,
+    email varchar(30) not null
+);
+
+create table properties(
+    propId int(5)primary key auto_increment,
+    propName varchar(20) not null,
+    propType varchar(20) not null,
+    propDescription text not null, 
+    propContact int(15),
+    propPrice int(10) not null,
+    propSize varchar(10),
+    propLeaseType varchar (10),
+    propMonthlyPay int(10) not null,
+    propStatus varchar(10),
+    propUnits int(5),
+    propAvailableUnits int(5),
+    propBeds int(5),
+    propBaths int(5),
+    propSqrfoot int(5),
+    image varchar(200),
+    listType varchar(30)
+);

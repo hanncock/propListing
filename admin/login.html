@@ -1,0 +1,180 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="../ajax.js"> </script>
+
+        
+    </head>
+    <body>
+        <form method="POST">
+            Username <input type="text" name="username" id="username"><br><br>
+            Password <input type="text" name="password" id="password"></br>
+            <button onclick="Login()">Submit</button>
+        </form>
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth" dir="ltr">
+    <head>
+        <script type="text/javascript" src="../ajax.js"> </script>
+        <meta charset="UTF-8" />
+        <title>Hously - Tailwind CSS Real Estate Website Landing Page Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta content="Real Estate Website Landing Page" name="description" />
+        <meta content="Real Estate, buy, sell, Rent, tailwind Css" name="keywords" />
+        <meta name="author" content="Shreethemes" />
+        <meta name="website" content="https://shreethemes.in" />
+        <meta name="email" content="support@shreethemes.in" />
+        <meta name="version" content="1.3.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="../site/assets/images/favicon.ico" />
+
+        <!-- Css -->
+        <link href="../site/assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
+        <!-- Main Css -->
+        <link href="../site/assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="../site/assets/css/icons.css" />
+        <link rel="stylesheet" href="../site/assets/css/tailwind.css" />
+        <!-- <script src="../ajax.js"></script> -->
+
+    </head>
+    
+    <body class="dark:bg-slate-900">
+        <!-- Start Navbar -->
+        <nav id="topnav" class="defaultscroll is-sticky">
+            <div class="container">
+                <!-- Logo container-->
+                <a class="logo" href="index.html">
+                    <img src="assets/images/logo-dark.png" class="inline-block dark:hidden" alt="">
+                    <img src="assets/images/logo-light.png" class="hidden dark:inline-block" alt="">
+                </a>
+                <!-- End Logo container-->
+
+                <!-- Start Mobile Toggle -->
+                <div class="menu-extras">
+                    <div class="menu-item">
+                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- End Mobile Toggle -->
+
+                <!--Login button Start-->
+                
+
+            </div><!--end container-->
+        </nav><!--end header-->
+        <!-- End Navbar -->
+
+        <!-- Google Map -->
+        <!-- <div class="container-fluid relative mt-20">
+            <div class="grid grid-cols-1">
+                <div class="w-full leading-[0] border-0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin" style="border:0" class="w-full h-[500px]" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div> -->
+        <!--end container-->
+        <!-- Google Map -->
+
+        <!-- Start Section-->
+        <section class="relative lg:py-24 py-16">
+            <div class="container">
+                <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+                    <div class="lg:col-span-7 md:col-span-6">
+                        <img src="assets/images/svg/contact.svg" alt="">
+                    </div>
+
+                    <div class="lg:col-span-5 md:col-span-6">
+                        <div class="lg:ml-5">
+                            <div class="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-700 p-6">
+                                <h3 class="mb-6 text-2xl leading-normal font-medium">Login !</h3>
+
+                                <!-- <form method="post" name="myForm" id="myForm" onsubmit="return validateForm()"> -->
+                                <form method="post" name="myForm" id="myForm">
+                                    <p class="mb-0" id="error-msg"></p>
+                                    <div id="simple-msg"></div>
+                                    <div class="grid lg:grid-cols-12 lg:gap-6">
+                                        <div class="lg:col-span-6 mb-5">
+                                            <label for="name" class="font-medium">UserName:</label>
+                                            <input name="name" id="username" type="text" class="form-input mt-2" placeholder="Name :">
+                                        </div>
+        
+                                        <div class="lg:col-span-6 mb-5">
+                                            <label for="email" class="font-medium">Password:</label>
+                                            <input name="email" id="password" type="password" class="form-input mt-2" placeholder="Password :">
+                                        </div>
+                                    </div>
+    
+                                    <!-- <div class="grid grid-cols-1">
+                                        <div class="mb-5">
+                                            <label for="subject" class="font-medium">Your Question:</label>
+                                            <input name="subject" id="subject" class="form-input mt-2" placeholder="Subject :">
+                                        </div>
+    
+                                        <div class="mb-5">
+                                            <label for="comments" class="font-medium">Your Comment:</label>
+                                            <textarea name="comments" id="comments" class="form-input mt-2 textarea" placeholder="Message :"></textarea>
+                                        </div>
+                                    </div> -->
+                                    <!-- <button type="submit" id="submit" name="send" onclick="Login()" class="btn bg-green-600 hover:bg-green-700 text-white rounded-md">Send Message</button> -->
+                                    <a href="dashboard.html"><button type="submit" id="submit" name="send" onclick="Login()" class="btn bg-green-600 hover:bg-green-700 text-white rounded-md">Login</button></a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--end container-->
+            
+            
+            
+        </section><!--end section-->
+        <!-- End Section-->
+
+        <!-- Start Footer -->
+        <!--end footer-->
+        <!-- End Footer -->
+        <!-- Switcher -->
+        <!-- <div class="fixed top-1/4 -left-2 z-3">
+            <span class="relative inline-block rotate-90">
+                <input type="checkbox" class="checkbox opacity-0 absolute" id="chk" />
+                <label class="label bg-slate-900 dark:bg-white shadow dark:shadow-gray-700 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8" for="chk">
+                    <i class="uil uil-moon text-[20px] text-yellow-500 mt-1"></i>
+                    <i class="uil uil-sun text-[20px] text-yellow-500 mt-1"></i>
+                    <span class="ball bg-white dark:bg-slate-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
+                </label>
+            </span>
+        </div> -->
+        <!-- Switcher -->
+
+        <!-- LTR & RTL Mode Code -->
+        <!-- <div class="fixed top-[40%] -left-3 z-50">
+            <a href="" id="switchRtl">
+                <span class="py-1 px-3 relative inline-block rounded-b-md -rotate-90 bg-white dark:bg-slate-900 shadow-md dark:shadow dark:shadow-gray-800 font-semibold rtl:block ltr:hidden" >LTR</span>
+                <span class="py-1 px-3 relative inline-block rounded-b-md -rotate-90 bg-white dark:bg-slate-900 shadow-md dark:shadow dark:shadow-gray-800 font-semibold ltr:block rtl:hidden">RTL</span>
+            </a>
+        </div> -->
+        <!-- LTR & RTL Mode Code -->
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 ltr:right-5 rtl:left-5 h-9 w-9 text-center bg-green-600 text-white justify-center items-center"><i class="uil uil-arrow-up"></i></a>
+        <!-- Back to top -->
+
+        <!-- JAVASCRIPTS -->
+        <script src="../site/assets/libs/tobii/js/tobii.min.js"></script>
+        <script src="../site/assets/libs/tobii/js/tobii.min.js"></script>
+        <script src="../site/assets/libs/feather-icons/feather.min.js"></script>
+        <script src="../site/assets/js/plugins.init.js"></script>
+        <!-- <script src="../assets/js/app.js"></script> -->
+        <script src="../site/assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>
