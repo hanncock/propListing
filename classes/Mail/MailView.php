@@ -35,8 +35,8 @@ class MailView{
         $mail->isSMTP();
 
         $mail->SMTPAuth = true;
-        $mail->Username = 'sokesoke10725@gmail.com';
-        $mail->Password = "tvsxbxtktnycktql";
+        $mail->Username = 'mail@mail.com';
+        $mail->Password = "mailPassword";
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
         // $mail->SMTPSecure = "ssl";
@@ -45,9 +45,9 @@ class MailView{
         $mail->isHTML(true);
         
         
-        $mail ->setFrom('sokesoke10725@gmail.com','soke');
-        // $mail->addAddress('hanncock98@gmail.com','hanncock');
-        $mail->addAddress($this->to,'hanncock');
+        $mail ->setFrom('usefroem@mail.com','name to use');
+
+        $mail->addAddress($this->to,'name to ');
         
 
         $mail->Subject = "Login Credentials";
